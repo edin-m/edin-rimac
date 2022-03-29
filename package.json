@@ -1,0 +1,23 @@
+{
+  "name": "edin-rimac",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@tyriar/avl-tree": "^2.0.6",
+    "apollo-server": "^3.6.6",
+    "class-transformer": "^0.5.1",
+    "graphql": "^16.3.0",
+    "typed-inject": "^3.0.1",
+    "typescript": "^4.6.3"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.23"
+  }
+}
