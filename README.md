@@ -18,7 +18,7 @@ $ npm run start
 
 ### Usage
 
-Go to `http://localhost:4000/graphql` and openg GraphQL console.
+Go to [http://localhost:4000/graphql](http://localhost:4000/graphql) and openg GraphQL console.
 
 Check [src/game/graphql/typeDefs.gql.ts](src/game/graphql/typeDefs.gql.ts) for full specification
 
@@ -108,8 +108,8 @@ Or you can pass in environment variables:
 - DB_NAME
 
 ### Future work
-[_] - Ability for computer to play the first move
-[_] - Implement Game AI
-[_] - N-sized game board
-[_] - Improve test coverage
-[_] - Improve Mongoose-related models static typing
+[_] - Ability for computer to play the first move  
+[_] - Implement Game AI  
+[_] - N-sized game board  
+[_] - Improve test coverage  
+[_] - Improve Mongoose-related models static typing  
