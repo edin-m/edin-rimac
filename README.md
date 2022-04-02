@@ -108,8 +108,8 @@ Or you can pass in environment variables:
 - DB_NAME
 
 ### Future work
-[_] - Ability for computer to play the first move  
-[_] - Implement Game AI  
-[_] - N-sized game board  
-[_] - Improve test coverage  
-[_] - Improve Mongoose-related models static typing  
+[ ] - Ability for computer to play the first move  
+[ ] - Implement Game AI  
+[ ] - N-sized game board  
+[ ] - Improve test coverage  
+[ ] - Improve Mongoose-related models static typing  
