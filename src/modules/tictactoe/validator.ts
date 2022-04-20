@@ -1,4 +1,4 @@
-import { NotFoundError } from "../errors";
+import { NotFoundError } from "../../errors";
 import { gameTypes, GAME_BOARD_SIZE } from "./constants";
 import { BothPlayersNotJoined as NotBothPlayersJoined, CannotJoinSinglePlayerGameError, InvalidGameMove, PlayerMissingError } from "./errors";
 import { GameResult, TicTacToe } from "./tictactoe";

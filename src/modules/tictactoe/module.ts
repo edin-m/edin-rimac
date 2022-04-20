@@ -1,6 +1,6 @@
 import { PubSub } from "graphql-subscriptions";
-import { App, Module } from "../core/interfaces";
-import { IoC } from "../core/ioc";
+import { App, Module } from "../../core/interfaces";
+import { IoC } from "../../core/ioc";
 import { services } from "./constants";
 import { GameService, GameServiceImpl } from "./service";
 

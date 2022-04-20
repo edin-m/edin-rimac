@@ -6,13 +6,13 @@ import { DocumentNode } from "graphql";
 import { mergeTypeDefs } from "@graphql-tools/merge";
 import { ApolloServer } from "apollo-server-express";
 
-import { createGraphQLServer } from "../core/graphql.server";
-import { App, Module } from "../core/interfaces";
-import { IoC } from "../core/ioc";
+import { createGraphQLServer } from "../../core/graphql.server";
+import { App, Module } from "../../core/interfaces";
+import { IoC } from "../../core/ioc";
 import dummyGql from "./dummy.gql";
 import { PubSub } from "graphql-subscriptions";
-import { GameModule } from "../game/module";
-import config from '../config/config';
+import { GameModule } from "../../modules/tictactoe/module";
+import config from '../../config/config';
 
 export class MainApp implements App {
     ioc: IoC = new IoC();

@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 import { CannotJoinGameFullError } from "./errors";
 import Game from "./schema/game";
 import { GameId, GameMove, GameType, PlayerId } from "./types";
-import { IoC } from "../core/ioc";
+import { IoC } from "../../core/ioc";
 import { events, gameTypes } from './constants';
 import { GameResult, TicTacToe } from "./tictactoe";
 import { GameValidator } from "./validator";

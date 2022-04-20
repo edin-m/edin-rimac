@@ -1,6 +1,6 @@
 
 import { App } from "./core/interfaces";
-import { MainApp } from "./mainapp/mainapp";
+import { MainApp } from "./apps/mainapp/mainapp";
 
 const app: App = new MainApp();
 
