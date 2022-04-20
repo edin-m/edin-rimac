@@ -9,31 +9,47 @@ export enum GameResult {
 }
 
 export class TicTacToe {
-    private boardSize = 3;
+    private boardSize: number;
 
-    private state: [string, string, string];
+    private state: Array<string>;
 
     // generate for board of size N | N > 3
-    private combinations = [
-        [[0, 0], [1, 1], [2, 2]],
-        [[0, 2], [1, 1], [2, 0]],
+    combinations: [number, number][][] = [];
 
-        [[0, 0], [0, 1], [0, 2]],
-        [[1, 0], [1, 1], [1, 2]],
-        [[2, 0], [2, 1], [2, 2]],
-
-        [[0, 0], [1, 0], [2, 0]],
-        [[0, 1], [1, 1], [2, 1]],
-        [[0, 2], [1, 2], [2, 2]],
-    ];
-
-    constructor(state: [string, string, string], boardSize = GAME_BOARD_SIZE) {
+    constructor(state: Array<string>, boardSize = GAME_BOARD_SIZE) {
         this.state = state;
         this.boardSize = boardSize;
 
-        if (this.boardSize > 3) {
-            throw new Error('Board sizes > 3 not supported');
+        this._generateCombinations();
+    }
+
+    private _generateCombinations() {
+        const combos: [number, number][][] = [];
+        const n = this.boardSize;
+
+        // rows,cols
+        for (let i = 0; i < n; i++) {
+            const arrRow: [number, number][] = [];
+            const arrCol: [number, number][] = [];
+            for (let j = 0; j < n; j++) {
+                arrRow.push([i, j]);
+                arrCol.push([j, i]);
+            }
+            combos.push(arrRow);
+            combos.push(arrCol);
         }
+
+        // diags
+        const diagLR: [number, number][] = [];
+        const diagRL: [number, number][] = [];
+        for (let i = 0; i < n; i++) {
+            diagLR.push([i, i]);
+            diagRL.push([i, n-1-i]);
+        }
+        combos.push(diagLR);
+        combos.push(diagRL);
+
+        this.combinations = combos;
     }
 
     setState(state: any) {
@@ -93,11 +109,11 @@ export class TicTacToe {
             }
         }
 
-        let index = this.randomIntFromInterval(0, empty.length - 1);
+        let index = this._randomIntFromInterval(0, empty.length - 1);
         return empty[index];
     }
 
-    private randomIntFromInterval(min, max): number {
+    private _randomIntFromInterval(min, max): number {
         return Math.floor(Math.random() * (max - min + 1) + min)
     }
 }

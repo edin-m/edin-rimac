@@ -28,5 +28,10 @@ describe('test tictactoe', () => {
             expect(result).to.equal(item.expectedResult);
         });
     });
+
+    it('test combinations', () => {
+        const game = new TicTacToe([], 4);
+        console.log(game.combinations);
+    });
 });
 
